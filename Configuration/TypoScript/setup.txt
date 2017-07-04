@@ -1,0 +1,20 @@
+tt_content.shortcut {
+	dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+        }
+    }
+}
+
+lib.contentElement {
+	templateRootPaths.20 = EXT:azgr_config/Resources/Private/fluid_styled_content/Templates/
+	layoutRootPaths.20 = EXT:azgr_config/Resources/Private/fluid_styled_content/Layouts/
+	partialRootPaths.20 = EXT:azgr_config/Resources/Private/fluid_styled_content/Partials/
+}
+
+lib.parseFunc_RTE_Header < lib.parseFunc_RTE
+lib.parseFunc_RTE_Header {
+	allowTags = strong, br
+	nonTypoTagStdWrap.encapsLines >
+}

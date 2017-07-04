@@ -1,0 +1,23 @@
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+
+
+# Minimal configuration for the editor
+editor:
+  config:
+    height: "80px"
+    enterMode: 2
+    stylesSet: []
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:azgr_config/Resources/Public/rte_ckeditor/Css/header.css"]
+    toolbarGroups:
+      - { name: basicstyles, groups: [ basicstyles] }
+      - { name: clipboard, groups: [clipboard, undo] }
+    removeButtons:
+      - Anchor
+      - Superscript
+      - Subscript
+      - Underline
+      - Strike
+      - Italic

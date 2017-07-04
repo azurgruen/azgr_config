@@ -1,0 +1,3 @@
+RTE.default.preset = minimal
+RTE.config.tt_content.header.preset = header
+RTE.config.tt_content.bodytext.preset = bodytext
