@@ -38,9 +38,12 @@ class CategoriesViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     public function render($pageUid)
     {
-    	$categories = $this->getCategoriesFromPage($pageUid);
-        if (empty($categories)) $categories = null;
-        
+	    if (!$pageUid) {
+		    $categories = $this->categoryRepository->findAll();
+	    } else {
+	    	$categories = $this->getCategoriesFromPage($pageUid);
+	        if (empty($categories)) $categories = null;
+        }
         //DebuggerUtility::var_dump($results);
         return $categories;
     }
