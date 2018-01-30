@@ -1,6 +1,6 @@
 <?php
 
-namespace Azurgruen\GapConfig\ViewHelpers;
+namespace Azurgruen\AzgrConfig\ViewHelpers;
 
 use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -36,9 +36,9 @@ class CategoriesViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      * @param int uid of the content element
      * @return array Either \TYPO3\CMS\Core\Resource\FileReference or null
      */
-    public function render($pageUid)
+    public function render($pageUid = 0)
     {
-	    if (!$pageUid) {
+	    if ($pageUid == 0) {
 		    $categories = $this->categoryRepository->findAll();
 	    } else {
 	    	$categories = $this->getCategoriesFromPage($pageUid);
