@@ -1,3 +1,129 @@
 RTE.default.preset = minimal
-RTE.config.tt_content.header.preset = header
+#RTE.config.tt_content.header.preset = header
 RTE.config.tt_content.bodytext.preset = bodytext
+
+#TCEMAIN.translateToMessage = asd
+
+TCEMAIN.permissions {
+	# Owner be_users UID for new pages:
+	#userid = 20
+	# Owner be_groups UID for new pages:
+	groupid = 1
+	# Allowed actions for owner group
+	group = show,edit,delete,new,editcontent
+}
+
+TCEMAIN.table {
+	pages {
+		disablePrependAtCopy = 1
+		disableHideAtCopy = 1
+	}
+	tt_content {
+		disablePrependAtCopy = 1
+		disableHideAtCopy = 1
+	}
+}
+
+TCEFORM.pages {
+	subtitle.disabled = 1
+	extendToSubpages.disabled = 1
+	fe_group.disabled = 1
+	fe_login_mode.disabled = 1
+	author.disabled = 1
+	author_email.disabled = 1
+	lastUpdated.disabled = 1
+	newUntil.disabled = 1
+	starttime.disabled = 1
+	endtime.disabled = 1
+	url_scheme.disabled = 1
+	cache_timeout.disabled = 1
+	cache_tags.disabled = 1
+	no_cache.disabled = 1
+	l18n_cfg.disabled = 1
+	is_siteroot.disabled = 1
+	no_search.disabled = 1
+	editlock.disabled = 1
+	php_tree_stop.disabled = 1
+	alias.disabled = 1
+	target.disabled = 1
+	module.disabled = 1
+	storage_pid.disabled = 1
+	content_from_pid.disabled = 1
+	TSconfig.disabled = 1
+	tsconfig_includes.disabled = 1
+	categories.disabled = 1
+	backend_layout.disabled = 1
+	backend_layout_next_level.disabled = 1
+	layout.disabled = 1
+	sys_language_uid.disabled = 1
+	keywords.disabled = 1
+	abstract.disabled = 1
+	layout {
+		altLabels.0 = Normal
+		removeItems = 1,2,3
+#		addItems.101 = Büro
+	}
+}
+
+TCEFORM.tt_content {
+#	header.types.fluidcontent_content.disabled = 1
+	header_link.types.fluidcontent_content.disabled = 1
+	header_position.types.fluidcontent_content.disabled = 1
+	header_layout.types.fluidcontent_content.disabled = 1
+	date.types.fluidcontent_content.disabled = 1
+	subheader.disabled = 1
+	header_position.disabled = 1
+	header_link.disabled = 1
+	date.disabled = 1
+	frame_class.disabled = 1
+	space_before_class.disabled = 1
+	space_after_class.disabled = 1
+	linkToTop.disabled = 1
+	sectionIndex.disabled = 1
+	starttime.disabled = 1
+	endtime.disabled = 1
+	fe_group.disabled = 1
+	categories.disabled = 1
+	rowDescription.disabled = 1
+	editlock.disabled = 1
+	colPos.disabled = 1
+	sys_language_uid.disabled = 1
+	imageborder.disabled = 1
+	imageorient.disabled = 1
+	imagecols.disabled = 1
+	image_zoom.disabled = 1
+	table_caption.disabled = 1
+	table_class.disabled = 1
+	table_header_position.disabled = 1
+	table_tfoot.disabled = 1
+	cols.disabled = 1
+	CType {
+		removeItems := addToList(bullets, table, uploads, textpic, image, textmedia, menu_categorized_pages, menu_categorized_content, menu_pages, menu_subpages, menu_sitemap, menu_section, menu_abstract, menu_recently_updated, menu_related_pages, menu_section_pages, menu_sitemap_pages, div, shortcut, html, list, form_formframework)
+		removeItems := removeFromList(textpic, image, table)
+	}
+	header_layout {
+		altLabels.1 = Überschrift 1
+		altLabels.2 = Überschrift 2
+		altLabels.3 = Überschrift 3
+		removeItems =  0,4,5,6
+	}
+	layout {
+		disabled = 1
+		altLabels.0 = Normal
+		removeItems = 1,2,3
+#		addItems.101 = Versteckt auf Smartphones
+	}
+#	frame_class {
+#		disabled = 0
+#		altLabels.default = Normal
+#		removeItems = none, ruler-before, ruler-after, indent, indent-left, indent-right
+#		addItems.sectionfade = Fade effect for section
+#	}
+#	table_class {
+#		disabled = 0
+#		altLabels.default = Normal
+#		removeItems = striped, bordered
+#		addItems.vita = Vita (2 Spalten: Zeit, Tätigkeit)
+#	}
+
+}
