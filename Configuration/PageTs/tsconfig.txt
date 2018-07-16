@@ -127,3 +127,10 @@ TCEFORM.tt_content {
 #	}
 
 }
+
+TCEFORM.sys_file_reference {
+	alternative.disabled = 1
+	description.disabled = 1
+	link.disabled = 1
+	title.disabled = 1
+}
